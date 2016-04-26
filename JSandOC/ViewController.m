@@ -20,9 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //方法一
+    //[self chooseWebViewDelegate];
     
-    [self chooseWebViewDelegate];
-    
+    //方法二
     [self chooseWebViewJavascriptBridge];
     
     

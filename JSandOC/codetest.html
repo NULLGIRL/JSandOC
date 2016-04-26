@@ -1,0 +1,173 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <!-- Latest compiled and minified CSS -->
+    <script type="text/javascript" src="http://152.101.133.203:82/O2OBeauty/assets/js/jquery-1.10.2.min.js"></script> 							<!-- Load jQuery -->
+    <script type="text/javascript" src="http://152.101.133.203:82/O2OBeauty/assets/js/jqueryui-1.9.2.min.js"></script> 							<!-- Load jQueryUI -->
+
+    <script type="text/javascript" src="http://152.101.133.203:82/O2OBeauty/assets/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://152.101.133.203:82/O2OBeauty/assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="http://152.101.133.203:82/O2OBeauty/assets/css/invite_friend.css"/>
+
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+<div style="position: relative; text-align: center;">
+    <img class="hand" src="http://152.101.133.203:82/O2OBeauty/assets/images/invite_friend/invitefd_02-12.png"/>
+    <div class="desc_number">
+        <p>介紹號碼:</p>
+        <p></p>
+        <div class="number text-center">267F62</div>
+    </div>
+    <div class="share" >
+        <div style="">成功分享各獲100積分</div>
+        <div class="share_details">
+            <div class="share_details_img">
+                <img src="http://152.101.133.203:82/O2OBeauty/assets/images/invite_friend/invitefd_02-11.png"/>
+            </div>
+            <div class="share_details_text">好友註冊為會員。</div>
+
+            </br>
+            <div class="share_details_img">
+                <img src="http://152.101.133.203:82/O2OBeauty/assets/images/invite_friend/invitefd_02-11.png"/>
+            </div>
+            <div class="share_details_text">好友完成首次項目。</div>
+
+            <div class="share_details_footer">分享次數没有限制。</div>
+        </div>
+    </div>
+    <script>
+        window.onerror = function(err) {
+            log('window.onerror: ' + err)
+        }
+    
+    function setupWebViewJavascriptBridge(callback) {
+        if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+        if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
+        window.WVJBCallbacks = [callback];
+        var WVJBIframe = document.createElement('iframe');
+        WVJBIframe.style.display = 'none';
+        WVJBIframe.src = 'wvjbscheme://__BRIDGE_LOADED__';
+        document.documentElement.appendChild(WVJBIframe);
+        setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+    }
+    
+    setupWebViewJavascriptBridge(function(bridge) {
+                                 
+                                 bridge.registerHandler('testJavascriptHandler', function(data, responseCallback) {
+                                                        
+                                                        var responseData = { 'Javascript Says To OC':'Right back atcha!'};
+                                                        responseCallback(responseData);
+                                                        });
+                
+                                 
+                                 
+                                 var facebookButton = document.getElementById('Facebook');
+                                 facebookButton.onclick = function(e) {
+                                        e.preventDefault();
+                                        bridge.callHandler('facebookObjcCallback', {'foo': 'bar'}, function(response) {
+                                                    <!-- 当接收到OC传来消息后可在此处执行相应操作-->
+                                                           });
+                                 };
+                                 
+                                 
+                                 var QQShareBtn = document.getElementById('QQShare')
+                                 QQShareBtn.onclick = function(a){
+                                 a.preventDefault();
+                                 bridge.callHandler('QQShareObjcCallback',{'QQ':'share'},function(response){
+                                                    <!-- 当接收到OC传来消息后可在此处执行相应操作-->
+                                                    });
+                                 
+                                 };
+                                 
+                                 var wxShareBtn = document.getElementById('WXShare')
+                                 wxShareBtn.onclick = function(a){
+                                 a.preventDefault();
+                                 bridge.callHandler('WXShareObjcCallback',{'WX':'share'},function(response){
+                                                    <!-- 当接收到OC传来消息后可在此处执行相应操作-->
+                                                    });
+                                 
+                                 };
+                                 
+                                 
+                                 var messageShareBtn = document.getElementById('MessageShare')
+                                 messageShareBtn.onclick = function(a){
+                                 a.preventDefault();
+                                 bridge.callHandler('MessageShareObjcCallback',{'Message':'share'},function(response){
+                                                    <!-- 当接收到OC传来消息后可在此处执行相应操作-->
+                                                    
+                                                    });
+                                 
+                                 };
+                                 
+                                 
+                                 var mailShareBtn = document.getElementById('MailShare')
+                                 mailShareBtn.onclick = function(a){
+                                 a.preventDefault();
+                                 bridge.callHandler('MailShareObjcCallback',{'Mail':'share'},function(response){
+                                                    <!-- 当接收到OC传来消息后可在此处执行相应操作-->
+                                                    });
+                                 
+                                 };
+                                 
+                                 });
+                                 
+                                 
+        </script>
+
+    <div class="share_box row-eq-height">
+        <div class="share_box_bg">
+            <div class="col-xs-3 share_btn share_btn_left" style="">
+                來分享給好友！            </div>
+            <div class="col-xs-9  share_btn">
+                <div id='log'>
+                    <a href="" id='Facebook'> <img  src="http://152.101.133.203:82/O2OBeauty/assets/images/invite_friend/invitefd_02-02.png"></a>
+
+                    <a href="" id='QQShare'> <img  src="http://152.101.133.203:82/O2OBeauty/assets/images/invite_friend/invitefd_02-03.png"></a>
+                    
+                    <a href="" id="WXShare"> <img  src="http://152.101.133.203:82/O2OBeauty/assets/images/invite_friend/invitefd_02-04.png"></a>
+                    
+                    <a href="" id="MessageShare"> <img  src="http://152.101.133.203:82/O2OBeauty/assets/images/invite_friend/invitefd_02-05.png"></a>
+                    
+                    <a href="" id="MailShare"> <img  src="http://152.101.133.203:82/O2OBeauty/assets/images/invite_friend/invitefd_02-06.png"></a>
+                </div>
+                
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="col-xs-12 activity_desc">
+    <h4>活動簡介：</h4>
+    <div class="activity_desc_box1">
+        1）邀請朋友 - 使用介紹編號<p></p>
+        2）朋友使用介紹人的介紹編號成功注用，能獲得50積分。        <img  src="http://152.101.133.203:82/O2OBeauty/assets/images/invite_friend/invitefd_02-07.png">
+        <img class="img2"  src="http://152.101.133.203:82/O2OBeauty/assets/images/invite_friend/invitefd_02-08.png">
+
+    </div>
+    <div class="activity_desc_box2">
+        <div class="text">分享愈多，獎賞愈多!</div>
+        <img  src="http://152.101.133.203:82/O2OBeauty/assets/images/invite_friend/invitefd_02-09.png">
+
+    </div>
+    <div class="activity_desc_box3">
+        3）朋友成功享受首次BeautyHome服務<p></p>
+        4) 介紹人能獲得積分獎賞，每位介紹人分享人數則沒有限制。 （朋友購買單項療程價錢的10 ％積分獎賞/套餐價錢的10 ％積分獎賞)        <img  src="http://152.101.133.203:82/O2OBeauty/assets/images/invite_friend/invitefd_02-10.png">
+
+    </div>
+</div>
+
+
+</body>
+<script>
+</script>
+</html>
